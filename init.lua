@@ -114,10 +114,23 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	type = "cooking",
+	output = "pets:cooked_fish",
+	recipe = "pets:fish",
+})
+
+minetest.register_craft({
     output = "pets:dog_food",
     recipe = {
         {"pets:cooked_vegan_meat"},
         {"default:paper"}
+    }
+})
+
+minetest.register_craft({
+    output = "pets:raw_vegan_meat",
+    recipe = {
+        {"default:apple"}
     }
 })
 
