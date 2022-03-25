@@ -155,51 +155,23 @@ minetest.register_craft({
 --Make dog hungry
 
 minetest.register_abm({
-	label = "Make dog hungry 1",
+	label = "Make dog hungry", -- This code finds any pets:dog and makes it hungry.
 	nodenames = {"pets:dog"},
 	interval = 60,
 	chance = 3,
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		if minetest.find_node_near(pos, 1, { "air" }) then
-			minetest.set_node(pos, {name = "pets:hungry_dog"})
-		end
-	end
-})
-
-minetest.register_abm({
-	label = "Make dog hungry 2",
-	nodenames = {"pets:dog"},
-	interval = 60,
-	chance = 3,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		if minetest.find_node_near(pos, 1, { "air" }) == nil then
-			minetest.set_node(pos, {name = "pets:hungry_dog"})
-		end
+		minetest.set_node(pos, {name = "pets:hungry_dog"})
 	end
 })
 
 --Make cat hungry
 
 minetest.register_abm({
-	label = "Make cat hungry 1",
+	label = "Make cat hungry", -- This code finds any pets:cat and makes it hungry.
 	nodenames = {"pets:cat"},
 	interval = 60,
 	chance = 3,
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		if minetest.find_node_near(pos, 1, { "air" }) then
-			minetest.set_node(pos, {name = "pets:hungry_cat"})
-		end
-	end
-})
-
-minetest.register_abm({
-	label = "Make cat hungry 2",
-	nodenames = {"pets:cat"},
-	interval = 60,
-	chance = 3,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		if minetest.find_node_near(pos, 1, { "air" }) == nil then
-			minetest.set_node(pos, {name = "pets:hungry_cat"})
-		end
+		minetest.set_node(pos, {name = "pets:hungry_cat"})
 	end
 })
